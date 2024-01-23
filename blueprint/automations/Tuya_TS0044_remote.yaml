@@ -86,7 +86,7 @@ trigger:
   topic: !input mqtt_topic
 action:
 - variables:
-    command: "{{ trigger.payload }}"
+    command: "{{ trigger.payload_json.action }}"
 - choose:
   - conditions: 
     - "{{ command == '1_single' }}"
